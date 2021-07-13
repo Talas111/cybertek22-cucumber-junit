@@ -4,6 +4,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class LoginStepDefinitions {
     @Given("user is on Login page")
@@ -13,6 +14,7 @@ public class LoginStepDefinitions {
     @When("user  enters valid Librarian username")
     public void user_enters_valid_librarian_username() {
         System.out.println("User enters Librarian userName");
+      //  Assert.fail("INTENTIONAL FAILING, DELETE IT LATER");
 
     }
     @When("user  enters valid Librarian password")
