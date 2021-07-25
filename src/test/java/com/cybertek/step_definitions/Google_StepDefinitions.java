@@ -37,4 +37,18 @@ String actualTitle = Driver.getDriver().getTitle();
 String expectedTitle = "apple";
         Assert.assertTrue(actualTitle.contains(expectedTitle));
     }
+
+    @When("User searches for {string}")
+    public void userSearchesFor(String arg0) {
+        GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+        googleSearchPage.searchBar.sendKeys(arg0+ Keys.ENTER);
+    }
+
+    @Then("user should see {string} in the title")
+    public void userShouldSeeInTheTitle(String expectedTitles) {
+        String actualTitle = Driver.getDriver().getTitle();
+        String expectedTitle = expectedTitles;
+
+        Assert.assertTrue(actualTitle.contains(expectedTitle));
+    }
 }

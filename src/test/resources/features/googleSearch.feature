@@ -7,8 +7,16 @@ Scenario: Search page title verification
   Then  User should see title is Google
 
 
- @workinprogress
+
   Scenario: User search title verification
     Given User is on Google home page
     When User searches for apple
     Then User should see apple in the title
+
+
+  @workinprogress
+   Scenario: User search title verification
+     Given User is on Google home page
+     When User searches for "mango fruit"
+     Then user should see "mango fruit" in the title
+
